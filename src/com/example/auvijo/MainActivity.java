@@ -5,6 +5,10 @@ import android.app.Activity;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
+	/*
+	 * (non-Javadoc) .Lets do this Buddy
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
