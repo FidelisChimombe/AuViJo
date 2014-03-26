@@ -5,12 +5,55 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/activityAudio"
+        android:id="@+id/saveButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/saveicon"
+        android:text="" 
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="20dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/saveButton"
+        android:layout_toRightOf="@+id/deleteButton"
+        android:background="@drawable/startbutton"
+        android:text=""
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/delete"
+        android:text="" 
+        android:onClick="onClick" />
+
+    <!--  VideoView
+        android:id="@+id/videoView"
+        android:layout_width="475px"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_x="10px"
+        android:layout_y="10px" /-->
+
+
+        <Button
+        android:id="@+id/playButton"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="" 
         android:background="@drawable/audioicon"
         android:layout_gravity="center"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
 
 </RelativeLayout>
+
