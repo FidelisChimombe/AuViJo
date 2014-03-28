@@ -1,7 +1,9 @@
 package com.example.auvijo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,10 +14,9 @@ public class Text extends Activity implements View.OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.text);
-		Button savedText=(Button)findViewById(R.id.saveText);
-		EditText writtenText=(EditText)findViewById(R.id.writtenTextEntry);
-		savedText.setOnClickListener(this);
+		//setContentView(R.layout.text);
+		setContentView(R.layout.enter_text_layout_zz);
+		initializeButtons();
 	}
 	
 /*
@@ -23,14 +24,14 @@ public class Text extends Activity implements View.OnClickListener {
  */
 	
 	EditText writtenText;
-	Button savedText;
-	TextView txtExp;
+	Button saveTextButton;
+	final static String USER_ENTRY="com.example.auvijo.UserEntry";
 	
 public void initializeButtons(){
-	savedText=(Button)findViewById(R.id.saveText);
-	writtenText=(EditText)findViewById(R.id.writtenTextEntry);
-	txtExp=(TextView)findViewById(R.id.experimental);
-	savedText.setOnClickListener(this);
+	
+	saveTextButton=(Button)findViewById(R.id.save_entry_button);
+	writtenText=(EditText)findViewById(R.id.text_entry_view);
+	saveTextButton.setOnClickListener(this);
 	
 	
 	
@@ -44,10 +45,12 @@ public void initializeButtons(){
 	public void onClick(View v) {
 		initializeButtons();
 		switch(v.getId()){
-		case R.id.saveText:
-			String receivedText=writtenText.getText().toString();
-			txtExp.setText(receivedText);
+		case R.id.save_entry_button:
 			writtenText.clearFocus();
+			Intent intent = new Intent(this, SaveText.class);
+			String writtenTextString = writtenText.getText().toString();
+			intent.putExtra(USER_ENTRY, writtenTextString);
+			startActivity(intent);
 			break;
 		}
 		

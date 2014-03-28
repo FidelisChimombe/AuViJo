@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/final_saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Save" 
+        android:onClick="saveEntry"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_above="@+id/final_saveButton"
+        android:layout_alignParentLeft="true" >
+
+        <EditText
+            android:id="@+id/title_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:ems="10" 
+            android:hint="Entry Title"/>
+        <requestFocus />
+
+        <EditText
+            android:id="@+id/entry_notes"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/title_entry"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Journal Entry Notes" >
+        </EditText>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Monday 3/21/14" 
+        android:textSize="20dp"
+        android:gravity="right" 
+        android:textColor="#ff0000"/>
+    
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="My Happy Day"
+        android:textSize="30dp" 
+        android:textColor="#0000FF"/>
+    <TextView
+        android:id="@+id/textSpace"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="\nI was really happy on Monday. I had talked with my family back home. They were so happy to hear my voice after a very very long time. I wish them the best. I love my family. They are the reason why I am still strong and not 
+        giving up. Love you Monther, Love you Ian and Love you Faina." 
+        android:textSize="20dp"/>
+    
+</LinearLayout>

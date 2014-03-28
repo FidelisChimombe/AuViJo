@@ -7,13 +7,16 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-     <uses-permission android:name="android.permission.CAMERA" />
-     <uses-feature android:name="android.hardware.camera"
-                  android:required="true" />
-     <uses-feature android:name="android.hardware.camera.autofocus" />
-     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -30,39 +33,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Audio"
+            android:name="com.example.auvijo.Audio"
             android:label="@string/app_name"
-            android:parentActivityName="com.example.auvijo.MainActivity" > <!-- parent activity  name, the name of the activity from which the activity is called from -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.auvijo.MainActivity" />
-        </activity>
-         <activity
-            android:name=".MyJournal"
-            android:label="@string/app_name"
-            android:parentActivityName="com.example.auvijo.MainActivity" > <!-- parent activity  name, the name of the activity from which the activity is called from -->
+            android:parentActivityName="com.example.auvijo.MainActivity" >
+ <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
         </activity>
         <activity
-            android:name=".Video"
+            android:name="com.example.auvijo.MyJournal"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.auvijo.MainActivity" >
+ <!-- parent activity  name, the name of the activity from which the activity is called from -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.auvijo.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.auvijo.Video"
             android:label="@string/app_name"
             android:parentActivityName="com.example.auvijo.MainActivity"
-            android:screenOrientation="portrait" > <!-- parent activity  name, the name of the activity from which the activity is called from -->
+            android:screenOrientation="portrait" >
+ <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
         </activity>
         <activity
-            android:name=".Text"
+            android:name="com.example.auvijo.Text"
             android:label="@string/app_name"
-            android:parentActivityName="com.example.auvijo.MainActivity" > <!-- parent activity  name, the name of the activity from which the activity is called from -->
+            android:parentActivityName="com.example.auvijo.MainActivity" >
+ <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
         </activity>
-       
+        
+        <activity
+            android:name="com.example.auvijo.SaveText"
+            android:label="@string/title_activity_save_text" >
+        </activity>
     </application>
 
 </manifest>

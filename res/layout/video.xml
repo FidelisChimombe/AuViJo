@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/save_entry_button"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
@@ -19,7 +19,7 @@
         android:layout_width="20dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/saveButton"
+        android:layout_toLeftOf="@+id/save_entry_button"
         android:layout_toRightOf="@+id/deleteButton"
         android:background="@drawable/startbutton"
         android:text=""

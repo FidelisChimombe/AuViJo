@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:orientation="vertical">
+	<!-- <TextView
+		android:id="@+id/text"
+		android:layout_height="50dp"
+		android:gravity="center_vertical"
+		android:text="text"
+		android:visibility="visible"
+		android:layout_width="fill_parent"
+		android:textColor="#FF000000"
+		android:background="#FFFFFFFF" /> -->
+
+   
+
+    <TextView
+        android:id="@+id/video_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tuesday 3/23/2014"
+        android:textSize="20dp"
+        android:gravity="right" 
+        android:textColor="#ff0000" />
+    
+     <TextView
+        android:id="@+id/video_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Naye Zvangu"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/video_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Video" />
+    
+    <TextView
+        android:id="@+id/video_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Video Notes" />
+    
+    
+	
+</LinearLayout>

@@ -213,7 +213,7 @@ public class Audio extends Activity
     }
 public void initialize(){
 	startButt=(Button)findViewById(R.id.startButton);
-    saveButt=(Button)findViewById(R.id.saveButton);
+    saveButt=(Button)findViewById(R.id.save_entry_button);
     deleteButt=(Button)findViewById(R.id.deleteButton);
     playButt=(Button)findViewById(R.id.playButton);
 }
