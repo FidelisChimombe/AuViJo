@@ -46,6 +46,9 @@ public class SaveText extends Activity {
 		
 		File file=new File(this.getFilesDir(), entry_title_s);
 		Log.d("file path",file.toString());
+		
+		Intent intent = new Intent(this, MyJournal.class);
+		startActivity(intent);
 	}
 
 }

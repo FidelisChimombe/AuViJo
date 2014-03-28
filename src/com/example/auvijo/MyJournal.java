@@ -2,6 +2,7 @@ package com.example.auvijo;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +34,12 @@ public class MyJournal extends ListActivity {
         mAdapter = new MyCustomAdapter(fileViews);
         setListAdapter(mAdapter);
     }
-
+    
+    @Override
+    public void onBackPressed() {
+    	Intent intent=new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
     private void prepareJournal() {
 		File dir = getFilesDir();
 		String[] files=dir.list();
