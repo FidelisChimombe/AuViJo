@@ -27,11 +27,13 @@ public final class R {
         public static final int exiticon=0x7f020003;
         public static final int ic_launcher=0x7f020004;
         public static final int myjournal=0x7f020005;
-        public static final int saveicon=0x7f020006;
-        public static final int startbutton=0x7f020007;
-        public static final int stopicon=0x7f020008;
-        public static final int texticon=0x7f020009;
-        public static final int videoicon=0x7f02000a;
+        public static final int recordicon=0x7f020006;
+        public static final int replayicon=0x7f020007;
+        public static final int saveicon=0x7f020008;
+        public static final int startbutton=0x7f020009;
+        public static final int stopicon=0x7f02000a;
+        public static final int texticon=0x7f02000b;
+        public static final int videoicon=0x7f02000c;
     }
     public static final class id {
         public static final int action_settings=0x7f08001d;

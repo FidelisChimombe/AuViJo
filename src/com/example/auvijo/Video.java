@@ -66,17 +66,24 @@ public class Video extends Activity{
 	}
 
 /** Create a file Uri for saving an image or video */
-private static Uri getOutputMediaFileUri(int type){
-      return Uri.fromFile(getOutputMediaFile(type));
+private Uri getOutputMediaFileUri(int type){
+      return Uri.fromFile(this.getOutputMediaFile(type));
 }
 
 /** Create a File for saving an image or video */
-private static File getOutputMediaFile(int type){
+private  File getOutputMediaFile(int type){
     // To be safe, you should check that the SDCard is mounted
     // using Environment.getExternalStorageState() before doing this.
 
-    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-              Environment.DIRECTORY_PICTURES), "MyCameraApp");
+//    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+//              Environment.DIRECTORY_PICTURES), "MyCameraApp");
+	
+	String b="Krystal and Beatrice";
+	
+	
+File mediaStorageDir =this.getFilesDir();
+    
+   
     // This location works best if you want the created images to be shared
     // between applications and persist after your app has been uninstalled.
 
