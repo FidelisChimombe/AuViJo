@@ -35,11 +35,12 @@ public class MyJournal extends ListActivity {
         setListAdapter(mAdapter);
     }
     
-    @Override
+    /*@Override
     public void onBackPressed() {
     	Intent intent=new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+        finish();
+    }*/
     private void prepareJournal() {
 		File dir = getFilesDir();
 		String[] files=dir.list();
