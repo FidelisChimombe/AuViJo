@@ -20,24 +20,6 @@
             />
 
         <Button
-            android:id="@+id/mainVideo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/mainText"
-            android:layout_toRightOf="@+id/mainAudio"
-            android:background="@drawable/videoicon" />
-
-        <Button
-            android:id="@+id/mainText"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignBaseline="@+id/mainVideo"
-            android:layout_alignBottom="@+id/mainVideo"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/texticon" />
-
-        <Button
             android:id="@+id/mainJournal"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -52,6 +34,16 @@
             android:layout_alignLeft="@+id/mainJournal"
             android:layout_alignParentBottom="true"
             android:background="@drawable/exiticon" />
+
+        <Button
+            android:id="@+id/mainText"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignBaseline="@+id/mainAudio"
+            android:layout_alignBottom="@+id/mainAudio"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/texticon" />
 
     </RelativeLayout>
 
