@@ -24,12 +24,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	public void initialize(){
 		Button audio=(Button)findViewById(R.id.mainAudio);
-    	Button video=(Button)findViewById(R.id.mainVideo);
+    	
     	Button text=(Button)findViewById(R.id.mainText);
     	Button journal=(Button)findViewById(R.id.mainJournal);
     	Button exit=(Button)findViewById(R.id.mainExit);
     	audio.setOnClickListener(this);
-    	video.setOnClickListener(this);
+    
     	text.setOnClickListener(this);
     	journal.setOnClickListener(this);
     	exit.setOnClickListener(this);
@@ -45,13 +45,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(k);
 			break;
 		case R.id.mainText:
-			Intent j=new Intent(this,Text.class);
+			Intent j=new Intent(this,Text.class);		
 			startActivity(j);
 			break;
-		case R.id.mainVideo:
-			Intent l=new Intent(this,Video.class);
-			startActivity(l);
-			break;
+	
 		case R.id.mainExit:
 			finish();
 			break;
