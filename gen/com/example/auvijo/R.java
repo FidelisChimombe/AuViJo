@@ -72,27 +72,30 @@ public final class R {
     public static final class layout {
         public static final int activity_audio_test=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int audio=0x7f030002;
-        public static final int audio_file_layout=0x7f030003;
-        public static final int enter_save_text_layout=0x7f030004;
-        public static final int enter_text_layout_zz=0x7f030005;
-        public static final int myjournal=0x7f030006;
-        public static final int save_text_layout=0x7f030007;
-        public static final int seperator_layout=0x7f030008;
-        public static final int text_file_layout=0x7f030009;
-        public static final int video=0x7f03000a;
-        public static final int video_file_layout=0x7f03000b;
+        public static final int activity_save_audio=0x7f030002;
+        public static final int audio=0x7f030003;
+        public static final int audio_file_layout=0x7f030004;
+        public static final int enter_save_text_layout=0x7f030005;
+        public static final int enter_text_layout_zz=0x7f030006;
+        public static final int myjournal=0x7f030007;
+        public static final int save_audio_layout=0x7f030008;
+        public static final int seperator_layout=0x7f030009;
+        public static final int text_file_layout=0x7f03000a;
+        public static final int video=0x7f03000b;
+        public static final int video_file_layout=0x7f03000c;
     }
     public static final class menu {
         public static final int audio_test=0x7f070000;
         public static final int main=0x7f070001;
-        public static final int save_text=0x7f070002;
+        public static final int save_audio=0x7f070002;
+        public static final int save_text=0x7f070003;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
         public static final int title_activity_audio_test=0x7f050004;
+        public static final int title_activity_save_audio=0x7f050005;
         public static final int title_activity_save_text=0x7f050003;
     }
     public static final class style {

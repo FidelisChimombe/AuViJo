@@ -81,6 +81,10 @@
             android:name="com.example.auvijo.Audio_test"
             android:label="@string/title_activity_audio_test" >
         </activity>
+        <activity
+            android:name="com.example.auvijo.SaveAudio"
+            android:label="@string/title_activity_save_audio" >
+        </activity>
     </application>
 
 </manifest>

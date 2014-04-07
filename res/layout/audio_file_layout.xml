@@ -18,13 +18,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="That Day"
-        android:textSize="20dp" />
+        android:textSize="30dp" 
+        android:textColor="#0000FF"/>
 
     <Button
         android:id="@+id/audio_play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play Audio" />
+        android:text="Play Audio" 
+        android:onClick="playAudio"/>
     
      <TextView
         android:id="@+id/audio_note"

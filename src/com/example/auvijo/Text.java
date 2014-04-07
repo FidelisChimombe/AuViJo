@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -63,20 +64,29 @@ public void initializeButtons(){
 	}
 	
 	private void saveEntry(String entry_title_s,String writtenTextString) {
+		File parent=new File(Environment.getExternalStorageDirectory().getAbsolutePath(),"AuViJo");
+		if (!parent.exists()) {parent.mkdirs();}
+		
+		File diaryEntries=new File(parent.getAbsolutePath(),"Diary Entries");
+		if (!diaryEntries.exists()) {diaryEntries.mkdirs();}
+		
+		File textFile=new File(diaryEntries.getAbsolutePath(),entry_title_s+".txt");
+		
 		FileOutputStream outputStream;
 
 		try {
-		  outputStream = openFileOutput(entry_title_s, this.MODE_PRIVATE);
+		  /*outputStream = openFileOutput(entry_title_s, this.MODE_PRIVATE);
+		  outputStream.write(writtenTextString.getBytes());
+		  outputStream.close();
+		  Log.d("fileSaved","the file saved");*/
+		  outputStream = new FileOutputStream(textFile, true);
 		  outputStream.write(writtenTextString.getBytes());
 		  outputStream.close();
 		  Log.d("fileSaved","the file saved");
 		} catch (Exception e) {
 		  e.printStackTrace();
 		}
-		
-		File file=new File(this.getFilesDir(), entry_title_s);
-		Log.d("file path",file.toString());
-		
+			
 		Intent intent = new Intent(this, MyJournal.class);
 		startActivity(intent);
 		finish();

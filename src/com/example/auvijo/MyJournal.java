@@ -3,7 +3,9 @@ package com.example.auvijo;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,26 +37,55 @@ public class MyJournal extends ListActivity {
         setListAdapter(mAdapter);
     }
     
-    /*@Override
-    public void onBackPressed() {
-    	Intent intent=new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }*/
+    
     private void prepareJournal() {
-		File dir = getFilesDir();
-		String[] files=dir.list();
-		File[] filesO=dir.listFiles();
+		//File dir = getFilesDir();
+    	Log.d("mina","1");
+    	File parent=new File(Environment.getExternalStorageDirectory().getAbsolutePath(),"AuViJo");
+		if (!parent.exists()) {parent.mkdirs();}
 		
+		File diaryEntriesFolder=new File(parent.getAbsolutePath(),"Diary Entries");
+		if (!diaryEntriesFolder.exists()) {diaryEntriesFolder.mkdirs();}
 		
-		int a=0;
+		File audioNotesFolder=new File(parent.getAbsolutePath(),"Audio Notes");
+		if (!audioNotesFolder.exists()) {audioNotesFolder.mkdirs();}
+    	//File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/AuViJo","Diary Entries");
+    	
+    	Log.d("mina2","1");
+    	Log.d("mina3",diaryEntriesFolder.toString());
+    	
+		String[] files=diaryEntriesFolder.list();
+		
+		File[] filesO=diaryEntriesFolder.listFiles();
+		
 		for(File file:filesO){
-			fileViews.add(getFileView(file));
+			String fileExtension=file.getName().substring(file.getName().lastIndexOf("."));
+			if(fileExtension.equals(".txt")){fileViews.add(getTextFileView(file));}
+			else if(fileExtension.equals(".3gp")){
+				fileViews.add(getAudioFileView(file));
+			}
+			
 			fileViews.add(new FileView("","","",3));
 		}
 	}
 
-	private FileView getFileView(File file) {
+	private FileView getAudioFileView(File file) {
+		String fileName=file.getName().substring(0,file.getName().lastIndexOf("."));
+		File fileNotes=new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/AuViJo/Audio Notes",fileName+".txt");
+		String fileNotesString=getTextFileData(fileNotes);
+		
+		return new FileView(fileName, new Date(file.lastModified()).toString(), fileNotesString, 1);
+	}
+
+
+	private FileView getTextFileView(File file) {
+	    String text=getTextFileData(file);
+	    String fileName=file.getName().substring(0,file.getName().lastIndexOf("."));
+		return new FileView(fileName, new Date(file.lastModified()).toString(), text, 2);
+	}
+
+    
+	public String getTextFileData(File file){
 		FileInputStream fis;
 	    byte[] data = new byte[(int)file.length()];
 		try {
@@ -73,10 +104,25 @@ public class MyJournal extends ListActivity {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		return new FileView(file.getName(), new Date(file.lastModified()).toString(), text, 2);
+	    return text;
 	}
-
-
+	
+	public void playAudio(View view){
+		TextView audioTitle=(TextView)findViewById(R.id.audio_name);
+		String audioTitleString=audioTitle.getText()+".3gp";
+		File audioFile=new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/AuViJo/Diary Entries",audioTitleString);
+		
+	    MediaPlayer mPlayer = new MediaPlayer();
+	    Log.d("audiotitle",audioFile.toString());
+	    try {
+			mPlayer.setDataSource(audioFile.toString());
+			mPlayer.prepare();
+			mPlayer.start();
+		} 
+	    catch (IOException e) {
+			Log.e("it failes", "prepare() failed");
+		}
+	}
 
 	private class MyCustomAdapter extends BaseAdapter {
         private static final int TYPE_VIDEO=0;

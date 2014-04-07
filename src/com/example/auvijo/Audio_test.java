@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.media.MediaRecorder;
 import android.media.MediaPlayer;
@@ -154,7 +155,7 @@ public class Audio_test extends Activity {
 
 		OnClickListener clicker = new OnClickListener() {
 			public void onClick(View v) {
-				onPlay(mStartPlaying);
+				/*onPlay(mStartPlaying);
 				if (mStartPlaying) {
 					setBackgroundResource(R.drawable.saveicon);
 					mPlayButton.setEnabled(false);
@@ -163,34 +164,34 @@ public class Audio_test extends Activity {
 					setBackgroundResource(R.drawable.saveicon);
 					mPlayButton.setEnabled(true);
 					mRecordButton.setEnabled(true);
-				}
+				}*/
 				mStartPlaying = !mStartPlaying;
+				Intent intent=new Intent(getContext(),SaveAudio.class);
+				startActivity(intent);
 			}
 		};
 
 		public SaveButton(Context ctx) {
 			super(ctx);
+			
 			setBackgroundResource(R.drawable.saveicon);
 			setOnClickListener(clicker);
 		}
 	}
 
 
-	/*public Audio_test() {
+	public Audio_test() {
 		mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
 
 		mFileName += "/audiorecordtest.3gp";
-	}*/
+	}
 
 	
 
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-		
-		mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
 
-		mFileName += "/audiorecordtest.3gp";
 		LinearLayout ll = new LinearLayout(this);
 		mRecordButton = new RecordButton(this);
 		ll.setWeightSum(100);

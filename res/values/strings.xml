@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_save_text">SaveText</string>
     <string name="title_activity_audio_test">Audio_test</string>
+    <string name="title_activity_save_audio">SaveAudio</string>
 
 </resources>

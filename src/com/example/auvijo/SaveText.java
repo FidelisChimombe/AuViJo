@@ -17,7 +17,7 @@ public class SaveText extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.save_text_layout);
+		setContentView(R.layout.save_audio_layout);
 		Intent intent = getIntent();
 		userEntry = intent.getStringExtra(Text.USER_ENTRY);
 	}
