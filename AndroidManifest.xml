@@ -37,7 +37,8 @@
             android:name="com.example.auvijo.Audio"
             android:label="@string/app_name"
             android:parentActivityName="com.example.auvijo.MainActivity" >
- <!-- parent activity  name, the name of the activity from which the activity is called from -->
+
+            <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
@@ -46,7 +47,8 @@
             android:name="com.example.auvijo.MyJournal"
             android:label="@string/app_name"
             android:parentActivityName="com.example.auvijo.MainActivity" >
- <!-- parent activity  name, the name of the activity from which the activity is called from -->
+
+            <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
@@ -56,7 +58,8 @@
             android:label="@string/app_name"
             android:parentActivityName="com.example.auvijo.MainActivity"
             android:screenOrientation="portrait" >
- <!-- parent activity  name, the name of the activity from which the activity is called from -->
+
+            <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
@@ -65,15 +68,19 @@
             android:name="com.example.auvijo.Text"
             android:label="@string/app_name"
             android:parentActivityName="com.example.auvijo.MainActivity" >
- <!-- parent activity  name, the name of the activity from which the activity is called from -->
+
+            <!-- parent activity  name, the name of the activity from which the activity is called from -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.auvijo.MainActivity" />
         </activity>
-        
         <activity
             android:name="com.example.auvijo.SaveText"
             android:label="@string/title_activity_save_text" >
+        </activity>
+        <activity
+            android:name="com.example.auvijo.Audio_test"
+            android:label="@string/title_activity_audio_test" >
         </activity>
     </application>
 

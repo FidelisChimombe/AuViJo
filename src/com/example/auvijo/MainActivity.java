@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity implements OnClickListener {
+	
 
 	/*
 	 * (non-Javadoc) .Lets do this Buddy
@@ -40,7 +41,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.mainAudio:
-			Intent k=new Intent(this,Audio.class);
+			Intent k=new Intent(this,Audio_test.class);
 			startActivity(k);
 			break;
 		case R.id.mainText:

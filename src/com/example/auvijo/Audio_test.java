@@ -13,7 +13,6 @@ package com.example.auvijo;
 
 import android.app.Activity;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.ViewGroup;
@@ -29,15 +28,17 @@ import android.media.MediaPlayer;
 
 import java.io.IOException;
 
-public class Audio extends Activity {
+public class Audio_test extends Activity {
 	private static final String LOG_TAG = "Audio";
 	private static String mFileName = null;
+	
+
 	private RecordButton mRecordButton = null;
 	private MediaRecorder mRecorder = null;
+
 	private PlayButton mPlayButton = null;
 	private MediaPlayer mPlayer = null;
 	private SaveButton mSaveButton = null;
-
 
 	private void onRecord(boolean start) {
 		if (start) {
@@ -67,15 +68,12 @@ public class Audio extends Activity {
 	}
 
 	private void stopPlaying() {
-		//mPlayer.reset();
 		mPlayer.release();
 		mPlayer = null;
 	}
 
 	private void startRecording() {
 		mRecorder = new MediaRecorder();
-		//mRecorder.setMaxDuration(5000);
-		
 		mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 		mRecorder.setOutputFile(mFileName);
@@ -117,8 +115,6 @@ public class Audio extends Activity {
 				mStartRecording = !mStartRecording;
 			}
 		};
-		
-		
 
 		public RecordButton(Context ctx) {
 			super(ctx);
@@ -178,24 +174,24 @@ public class Audio extends Activity {
 			setOnClickListener(clicker);
 		}
 	}
-	
-	
 
 
-	public Audio() {
+	/*public Audio_test() {
 		mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
 
 		mFileName += "/audiorecordtest.3gp";
-	}
+	}*/
 
 	
 
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
+		
+		mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
 
+		mFileName += "/audiorecordtest.3gp";
 		LinearLayout ll = new LinearLayout(this);
-		ll.setBackgroundResource(R.drawable.audioicon);
 		mRecordButton = new RecordButton(this);
 		ll.setWeightSum(100);
 
@@ -241,7 +237,6 @@ public class Audio extends Activity {
 		paramss.width = 80;
 
 		mSaveButton.setLayoutParams(paramss);
-		
 
 		setContentView(ll);
 	}

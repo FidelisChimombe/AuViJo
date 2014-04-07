@@ -3,7 +3,7 @@
     android:layout_height="fill_parent" >
 
     <Button
-        android:id="@+id/final_saveButton"
+        android:id="@+id/final_saveButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -20,7 +20,7 @@
         android:layout_alignParentLeft="true" >
 
         <EditText
-            android:id="@+id/title_entry"
+            android:id="@+id/title_entry2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
         <requestFocus />
 
         <EditText
-            android:id="@+id/entry_notes"
+            android:id="@+id/entry_notes2"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_below="@+id/title_entry"

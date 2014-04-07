@@ -6,14 +6,14 @@
     android:paddingRight="16dp"
     android:orientation="vertical" >
     <EditText
-        android:id="@+id/text_entry_view"
+        android:id="@+id/text_entry_view2"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="top"
         android:hint="Enter your reflection for today" />
     <Button
-        android:id="@+id/save_entry_button"
+        android:id="@+id/save_entry_button2"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
