@@ -20,6 +20,82 @@
             />
 
         <Button
+            android:id="@+id/mainJournal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/myjournal" />
+
+        <Button
+            android:id="@+id/mainExit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/mainJournal"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/exiticon" />
+
+        <Button
+            android:id="@+id/mainText"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignBaseline="@+id/mainAudio"
+            android:layout_alignBottom="@+id/mainAudio"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/texticon" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="388dp" >
+
+        <Button
+            android:id="@+id/mainAudio"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:background="@drawable/audioicon" 
+            />
+
+        <Button
             android:id="@+id/mainVideo"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -53,6 +129,6 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/exiticon" />
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 
-</LinearLayout>
+
