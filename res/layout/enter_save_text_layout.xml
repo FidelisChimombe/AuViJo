@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10" 
-            android:hint="Enter Journal Entry Title"
+            android:hint=""
             android:textStyle="bold|italic"/>
 
     <RelativeLayout
@@ -63,12 +63,13 @@
 
         <Button
             android:id="@+id/save_entry_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"
-            android:text="Save" />
+            android:text=""
+            android:background="@drawable/saveicon" />
 
     </RelativeLayout>
 

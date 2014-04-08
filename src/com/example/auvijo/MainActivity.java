@@ -1,4 +1,4 @@
-/*<<<<<<< HEAD
+/*
 package com.example.auvijo;
 
 import android.os.Bundle;
@@ -71,6 +71,7 @@ package com.example.auvijo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -89,6 +90,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		initialize();
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	}
 	public void initialize(){
 		Button audio=(Button)findViewById(R.id.mainAudio);
@@ -128,4 +130,4 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	}
 }
-//>>>>>>> 0599c939b9f878d18730fd1fe248d39879bc271d
+
